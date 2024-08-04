@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background: url(images/bg.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    flex: 1;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #f0a500;
+}
+
+.toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    cursor: pointer;
+}
+
+.toggle span {
+    display: block;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+}
+
+.head-content {
+    text-align: center;
+}
+
+.head-content img {
+    border-radius: 50%;
+    border: 4px solid #fff;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.head-content img:hover {
+    border-color: #f0a500;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    font-family: 'Georgia', serif;
+}
+
+.desc {
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.about-section,
+.skills-section,
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section h2,
+.skills-section h2,
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section {
+    background: #9ea0a3;
+}
+
+.skills-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-images img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-images img:hover {
+    transform: scale(1.1);
+}
+
+.contact-section {
+    background: #50555b;
+    color: #fff;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    background: #fff;
+    color: #333;
+}
+
+.contact-section button {
+    background: #f0a500;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-section button:hover {
+    background: #333;
+}
+
+.copyright {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .toggle {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .skills-images img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .desc {
+        font-size: 1.2rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .skills-images img {
+        width: 60px;
+        height: 60px;
+    }
+}

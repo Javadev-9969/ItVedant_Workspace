@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Aditya Dubey</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span class="brand-name"><a href="https://github.com/Javadev-9969">Aditya Dubey</a></span>
+            </div>
+            <div class="toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-links" id="navbar-links">
+                <a href="#">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <div class="head-content">
+            <img src="images/aditya.jpg" alt="Aditya Dubey">
+            <h1 class="name">Aditya Dubey</h1>
+            <p class="desc">Software Developer</p>
+        </div>
+    </header>
+    <section class="about-section" id="about">
+        <h2>About Me</h2>
+        <p>I am an aspiring software developer interested in developing robust and scalable software.</p>
+    </section>
+    <section class="skills-section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-images">
+            <img src="images/html.png" alt="HTML">
+            <img src="images/css.png" alt="CSS">
+            <img src="images/js.png" alt="JavaScript">
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" class="inp-name" placeholder="Name" required>
+            <input type="email" class="inp-mail" placeholder="Your Email" required>
+            <textarea rows="10" cols="40" placeholder="Your Message" class="inp-msg" required></textarea>
+            <button type="submit" class="inp-btn">Submit</button>
+        </form>
+    </section>
+    <footer class="copyright">
+        <p>&copy; 2024 Aditya Dubey. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navbarLinks = document.getElementById('navbar-links');
+            navbarLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
